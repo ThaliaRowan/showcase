@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+
+*{
+  box-sizing: border-box;
+  
+}
+
+body {
+  
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+h3{
+  font-weight: bold;
+}
+.forecast{
+  
+  font-size: 0.9em;
+}
+span{
+  font-size: 1em;
+}
+li:hover{
+  background-color: lightslategray;
+  text-decoration: underline;
+=======
 .App {
   text-align: center;
 }
@@ -21,4 +48,5 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+>>>>>>> main
 }
