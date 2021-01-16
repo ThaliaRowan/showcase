@@ -2,15 +2,15 @@ import React from "react";
 
 
 
-function searchBtn() {
+function SearchBtn() {
     return (
                  
-                <div class="input-group-append">
-                    <button class=" btn bg-primary text-light" id="search-button"><i class="fa fa-search"></i></button>
+                <div className="input-group-append">
+                    <button className=" btn bg-primary text-light" id="search-button"><i className="fa fa-search"></i></button>
                 </div>             
                         
        );   
 } 
 
 
-export default searchBtn;
+export default SearchBtn;

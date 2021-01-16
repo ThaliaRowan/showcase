@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-function checkBox() {
+function CheckBox() {
     return (
         <div class="form-check">
             <input type="checkbox" className="form-check-input" id="dropdownCheck" />
@@ -15,4 +15,4 @@ function checkBox() {
 }
 
 
-export default checkBox;
+export default CheckBox;

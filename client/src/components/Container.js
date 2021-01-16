@@ -1,5 +1,5 @@
 import React from "react";
-import searchHistory from "./searchHistory";
+import SearchHistory from "./searchHistory";
 import Display from "./display";
 
 
@@ -7,7 +7,7 @@ import Display from "./display";
 function Container() {
   return (
 <div>
-  <searchHistory/>
+  <SearchHistory/>
    <Display/>
 </div>
   );
