@@ -7,7 +7,8 @@ function searchPage() {
     return (
         <div>
             <JumboContainer/>
-            <Container/>             
+            <Container/>     
+            <p>Test</p>        
         </div>
     );
 }
