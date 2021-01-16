@@ -19,17 +19,10 @@
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "express": "^4.16.3",
-    "if-env": "^1.0.4",
-    "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
-=======
     "axios": "^0.21.1",
     "bootstrap": "^4.5.3",
     "express": "^4.16.3",
     "if-env": "^1.0.4",
     "react-bootstrap": "^1.4.3"
->>>>>>> main
   }
 }
