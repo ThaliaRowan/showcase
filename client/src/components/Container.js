@@ -6,10 +6,10 @@ import Display from "./display";
 
 function Container() {
   return (
-<div className= "row">
-  <SearchHistory/>
-   <Display/>
-</div>
+    <div className="row">
+      <SearchHistory />
+      <Display />
+    </div>
   );
 }
 
