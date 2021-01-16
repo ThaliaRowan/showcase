@@ -1,12 +1,29 @@
-# showcase
-ShowCase aims to accept a GitHub user name and produce a timeline containing each repo with its respective the repo names, the date they were created, and their descriptions. The ShowCase App major function is to make brief descriptive portfolio information of propective Tech employees easily accessable to recruitment teams and prospective employers. 
-Only public GitHub repos can be viewed .
+# Create React Express App
 
-## User Story
-User can read App with easy 
-User can enter a GitHub user name
-User can click a ‘Generate’ button to create and display the named users repo timeline
-User can see a warning message if the GitHub user name is not a valid GitHub user name.
+## About This Boilerplate
 
-## Bonus features
-User can see a summary of the number of repos tallied by the year they were created
+This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+
+The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+
+## Starting the app locally
+
+Start by installing front and backend dependencies. While in this directory, run the following command:
+
+```
+npm install
+```
+
+This should install node modules within the server and the client folder.
+
+After both installations complete, run the following command in your terminal:
+
+```
+npm start
+```
+
+Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+
+## Deployment (Heroku)
+
+To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.

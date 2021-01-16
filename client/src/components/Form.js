@@ -1,8 +1,9 @@
 import React from "react";
-import Password from "./password";
 import Email from "./email";
-import signinBtn from "./signinBtn";
+import Password from "./password";
 import checkBox from "./checkBox";
+import signinBtn from "./signinBtn";
+
 
 function Form() {
     return (
