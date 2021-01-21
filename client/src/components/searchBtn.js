@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-function SearchBtn() {
+function SearchBtn(props) {
     return (
                  
                 <div className="input-group-append" >
