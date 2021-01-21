@@ -3,7 +3,7 @@ import Form from "../components/Form";
 
 
 
-function contact() {
+function Contact() {
     return (
         <div className="dropdown-menu">
             <Form />
@@ -15,4 +15,4 @@ function contact() {
 }
 
 
-export default contact;
+export default Contact;
