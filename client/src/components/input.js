@@ -2,9 +2,12 @@ import React from "react";
 
 
 
-function Input() {
+function Input(props) {
     return (
-        <input type="text" className="form-control" id="search-city" aria-label="User Search" aria-describedby="search-button"/>                    
+        <input 
+        value={props.search}
+          onChange={props.handleInputChange}
+          type="text" className="form-control" id="search-city" aria-label="User Search" aria-describedby="search-button"/>                    
        );   
 } 
 

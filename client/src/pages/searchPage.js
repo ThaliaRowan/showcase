@@ -1,9 +1,9 @@
 import React from "react";
-import Container from "../components/container";
-import JumboContainer from "../components/jumboContainer";
+import Container from "components/container";
+import JumboContainer from "components/jumboContainer";
 
 
-function searchPage() {
+function SearchPage() {
     return (
         <div>
             <JumboContainer/>
@@ -13,4 +13,4 @@ function searchPage() {
 }
 
 
-export default searchPage;
+export default SearchPage;
