@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import {Card, Col, Row} from 'react-bootstrap';
 import API from "../utils/API";
-import SearchForm from "./SearchForm";
+import SearchForm from "../components/SearchForm";
 import '../box.css';
-
+import Results from "../components/Results";
 
 
 
@@ -22,7 +22,7 @@ function Search() {
 
 useEffect(() => {
   
-  document.title = "Wikipedia Searcher";
+
 
   API.searchTerms(searchState.search)
     .then(res => {
@@ -84,32 +84,13 @@ useEffect(() => {
             handleInputChange={handleInputChange}
             results={searchState.search}
           /> 
+        <Results 
+          resultState={resultState}
+        />
 
-        <div className="grid">
-        {resultState.map(data=>(
-             <div>
-               
-                     <Col md="6">
-                     <Card className="box" style={{width: "18rem"}} >
-         <Card.Body>
-         <Card.Title>{data.name}</Card.Title>
         
-         <Card.Text><span>Description: </span>{data.description}</Card.Text>
-             <Card.Text><span>Date: </span>{data.created_at}</Card.Text>
-             <Row>
-             <Card.Link href={data.clone_url} className="btn btn-secondary btn-lg" style={{marginLeft: "100px"}}role="button">View</Card.Link>
-             </Row>
-         </Card.Body>
-             </Card>
-                 </Col>
-            
-                   
-          
-         </div>
-              
-          ))}
-
-        </div>
+        
+       
          
     </div>
   );
