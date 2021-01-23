@@ -43,8 +43,13 @@ function Navbar() {
             
           </li>
         </ul>
-        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+        
       </div>
+      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
       {/* <div>
         <Tab mostsearchedUser={mostsearchedUser} />
       </div> */}
