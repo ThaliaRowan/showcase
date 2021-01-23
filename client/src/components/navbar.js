@@ -15,7 +15,7 @@ function Navbar() {
       {/* <div className="jumbotron container-fluid mt-2 text-center p-2" >
         <h1> <strong>Showcase</strong></h1>
       </div> */}
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
+<nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
       <Link className="navbar-brand" to="/">
       <h1> <strong>Showcase</strong></h1>
       </Link>
@@ -40,8 +40,10 @@ function Navbar() {
             >
               Contact
             </Link>
+            
           </li>
         </ul>
+        <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
       </div>
       {/* <div>
         <Tab mostsearchedUser={mostsearchedUser} />

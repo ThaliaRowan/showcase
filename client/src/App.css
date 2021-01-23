@@ -1,26 +1,39 @@
 
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   
 }
+
 
 body {
   
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1508778552286-12d4c6007799?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmVkJTIwY3VydGFpbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+  background-size: cover;
+
   
 }
 h3{
   font-weight: bold;
+  text-align: center;
 }
 .forecast{
   
   font-size: 0.9em;
+  
 }
 span{
   font-size: 1em;
 }
 li:hover{
-  background-color: lightslategray;
+  background-color: rgb(138, 138, 138);
   text-decoration: underline;
+}
+
+
+.navbar {
+  background-color: rgb(25, 88, 143);
 }
