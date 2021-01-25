@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 // import SearchPage from "./pages/searchPage";
 import Contact from "./pages/contact";
 import Search from "./pages/Search";
+import Signup from "./pages/Signup";
 import "./App.css";
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/" component={Search} />
         <Route exact path="/Search" component={Search} />
         <Route path="/Contact" component={Contact} />
+        <Route path="/Signup" component={Signup} />
       </div>
     </Router>
     // <div>
