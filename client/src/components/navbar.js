@@ -33,7 +33,7 @@ function Navbar() {
               Search
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-item" >
             <Link
               to="/contact"
               className={window.location.pathname === "/contact" ? "nav-link active" : "nav-link"}
@@ -42,14 +42,29 @@ function Navbar() {
             </Link>
             
           </li>
+         
+      <li className="nav-item ml-auto" style={{float: "left"}}>
+            <Link
+            
+              to="/Signup"
+              className={window.location.pathname === "/Signup" ? "nav-link active" : "nav-link"}
+              style={{color: "rgba(255,255,255,.5)"}}
+            >
+              Signup
+            </Link>
+            
+          </li>
+
+
         </ul>
 
         
       </div>
-      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on bottom
-</button>
+      
+
+      
+          
+    
       {/* <div>
         <Tab mostsearchedUser={mostsearchedUser} />
       </div> */}
