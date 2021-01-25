@@ -2,13 +2,6 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
-const mysql = require("mysql");
-const cors = require("cors");
-
-//hash password
-//if email already in db alert
-//wrong emailor pass
-
 
 
 // Define middleware here
@@ -18,55 +11,51 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
-app.use(cors());
+
+var bodyParser = require('body-parser');
+ 
+global.__basedir = __dirname;
+ 
+const db = require('./config/db.config.js');
+
+const User = db.User;
+
+let router = require('./routers/router.js');
+
+const cors = require('cors')
+const corsOptions = {
+  origin: 'http://localhost:4200',
+  optionsSuccessStatus: 200
+}
+app.use(cors(corsOptions));
+
+app.use(bodyParser.json());
+app.use(express.static('resources'));
+app.use('/', router);
 
 
-const db = mysql.createConnection({
-  user: "root",
-  host: "localhost",
-  password: "rzQ)2D?/",
-  database: "registration"
-});
 
-app.post("/signup", (req, res) => {
-
-const email = req.body.email
-const password = req.body.password
-
-  db.query("INSERT INTO users (email, password) VALUES (?,?)", [email, password], 
-    (err, result) => {
-      console.log(err)
-      console.log(result)
-    }
-  );
+// Create a Server
+const server = app.listen(PORT, function () {
+ 
+  let host = server.address().address
+  let port = server.address().port
+ 
+  console.log("App listening at https://%s:%s", host, port); 
 })
 
-
-app.get("/login", (req, res) => {
-
-  
-const email = req.body.email
-const password = req.body.password
-
-  db.query("SELECT FROM users WHERE email = ? AND password = ?", [email, password], 
-    (err, result) => {
-      if(err){
-        res.send({err:err});
-      }
-      if (result.length > 0) {
-        res.send(result)
-      } else {
-        res.send({message: "Wrong email/password"});
-      }
+db.sequelize.sync({force: true}).then(() => {
+  console.log('Drop and Resync with { force: true }');
+  User.sync().then(() => {
+    const users = [
+      { email: 'Dana@gmail.com', password: 'Iamdana'},
+      {email: "londa@gmail.com", password: "iamlonda"}
+    ]
+    
+    for(let i=0; i<users.length; i++){
+      User.create(users[i]);
     }
-  );
-})
+  })
+}); 
 
-// Define API routes here
 
-// Send every other request to the React app
-// Define any API routes before this runs
-
-app.listen(PORT, () => {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
-});
