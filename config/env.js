@@ -9,6 +9,10 @@ const env = {
       min: 0,
       acquire: 30000,
       idle: 10000
+    },
+    "production": {
+      "use_env_variable": "JAWSDB_URL",
+      "dialect": "mysql"
     }
   };
   
