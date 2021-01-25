@@ -54,59 +54,50 @@ function Signup(){
 
 
     return(
-
-
-      
-        <div>
-            <div className="container">
-            <div class="row" >
-  <div class="col-sm-12">
-     
-  
-  <Card style={{ width: '18rem', backgroundColor: "rgb(77, 10, 10)", color: "white"}}>
-  <Card.Body>
-  <div>
-      <Form >
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" type="email"   onChange={handleInputChange}
-                name="email"
-                placeholder="email"
-                value={formObject.email}/>
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
-
-  <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password"   onChange={handleInputChange}
-                name="password"
-                placeholder="password"
-                value={formObject.password} />
-  </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-</Form>
-      </div>
-  </Card.Body>
-</Card>
-
-
-
-
-
-   
-  </div>
-</div>
-
-   
-  </div>
+      <div className="container" style={{color: "black"}}>
+           <Card style={{ width: '30rem' }}>
+      <Card.Body>
+      <div className="row">
+        <div className="col-md-6 col-md-offset-3">
+          <h2>Sign Up Form</h2>
+          <form className="signup" >
+                <div className="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input
+                      onChange={handleInputChange}
+                      name="email"
+                      placeholder="email"
+                      value={formObject.email}
+                    />
+                </div>
+                <div className="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input
+                      onChange={handleInputChange}
+                      name="password"
+                      placeholder="password"
+                      value={formObject.password}
+                    />
+                </div>
+                <div style={{display: "none"}} id="alert" className="alert alert-danger" role="alert">
+                  <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <span className="sr-only">Error:</span> <span className="msg"></span>
+                </div>
+                <button type="submit" className="btn btn-default" 
+                      onClick={handleFormSubmit}>Sign Up</button>
+            </form>
+            <br />
+            <p>Or log in <a href="/login">here</a></p>
         </div>
+      </div>
+      </Card.Body>
+    </Card>
+
+
+
+      </div>
+
+     
     );
     
   }

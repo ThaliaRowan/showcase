@@ -42,17 +42,7 @@ function Navbar() {
             </Link>
             
           </li>
-          <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-sagittis lacus vel augue laoreet rutrum faucibus.">
-  Popover on bottom
-</button>
-
-
-        </ul>
-
-        
-      </div>
-      
+         
       <li className="nav-item ml-auto" style={{float: "left"}}>
             <Link
             
@@ -64,6 +54,13 @@ sagittis lacus vel augue laoreet rutrum faucibus.">
             </Link>
             
           </li>
+
+
+        </ul>
+
+        
+      </div>
+      
 
       
           
